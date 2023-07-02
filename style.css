@@ -1,0 +1,28 @@
+body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container,
+#etch-container{
+    width: 7in;
+    height: 7in;
+    display: flex;
+}
+#etch-container div{
+    display: flex;
+    flex:1;
+}
+#etch-container{
+    border: .1cm solid black;
+    flex-direction: column;
+}
+.grid-item {
+    cursor: pointer;
+    border: .01cm solid black;
+}
+.colored{
+    background-color: black;
+}
+
