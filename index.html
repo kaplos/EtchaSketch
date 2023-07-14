@@ -8,8 +8,22 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <span></span>
-    <div class="main-container"></div>
-    
+    <main class="main">
+        <div class="center-container">
+            <div class="button-holder">
+                <button id = "black" > Black</button>
+                <button id = "color">Color</button>
+                <button id = "eraser">Eraser</button>     
+                <div class="slider-holder">
+                    <span id >Size of Grid(not working)</span>
+                    <input id="slider"type="range" min="1" max="64" value="16" step="1">
+                    <span id="slider-value">Size </span>
+                    
+                </div>
+            </div>
+            <div class="main-container"></div>
+        </div>
+    </main>
+        
 </body>
 </html>
