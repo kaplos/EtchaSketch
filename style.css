@@ -3,45 +3,53 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: rgb(193, 193, 193);
 }
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.title span{
+    font-size: 60px;
+    font-family: sans-serif;
 
+}
+.main{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
 .main-container,
-#etch-container{
-    width: 70vw;
-    max-width: 7in;
-    height: 70vh;
-    max-height: 7in;
-    display: flex;
-    flex: 1;
-    
-    background-color: white;
-}
-#etch-container div{
-    display: flex;
-    flex:1;
-    
-}
-#etch-container{
-    border: .1cm solid black;
-    flex-direction: column;
-}
-.grid-item {
-    cursor: pointer;
-    border: .01cm solid black;
-}
-.colored{
-    background-color: black;
-}
-
-.grid-item :hover{
-    background-color: black;
-}
 .center-container{
     display: flex;
     align-items: space-evenly;
     justify-content: space-evenly;
     
+}
+#etch-container{
+    width: 70vw;
+    max-width: 9in;
+    height: 70vh;
+    max-height: 9in;
+    display: flex;
+    flex: 1;
+    background-color: white;
+    border: .1cm solid black;
+    flex-direction: column;
+}
+#etch-container div{
+    display: flex;
+    flex:1;
+}
+.grid-item {
+    cursor: pointer;
+    border: .01px solid black;
+}
+.grid-item :hover{
+    background-color: black;
 }
 
 .button-holder{
@@ -49,7 +57,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     margin: 10px;
-    height: 2.5in;
+    height: 3.5in;
     justify-content:space-between;
 }
 .clear{
@@ -71,8 +79,6 @@ body{
     margin-left:5px;
     background-color: white;
 }
-
-  
 .slider-holder,
 .slider-holder input{
     border-radius: none;
@@ -81,10 +87,9 @@ body{
     align-items: center;
     justify-content: center;
     flex: 1;
-    
-
+    font-family: sans-serif;
 }
-@media  (max-width: 767px){
+@media (max-width: 767px){
     .center-container{
         flex-direction: column-reverse;
         margin: 10px;
@@ -93,12 +98,16 @@ body{
     body{
         margin-top: .5in;
     }
-    
     #etch-container{
-        width: 100%;
-        height: 100%;
+        min-width:2.5in;
+        min-height:2.5in;
         max-height: 3in;
-        
+        flex: 1;
+    }
+    .title span{
+        font-size: 30px;
+        font-weight: bold;
+       
     }
 }
 
