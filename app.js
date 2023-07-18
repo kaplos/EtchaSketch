@@ -57,18 +57,17 @@ let sliderValue = document.querySelector("#slider-value")
         sliderValue.textContent = `${slider.value} x ${slider.value}`;
         makeGrid(parseInt(slider.value));
     
-})
+    })
 function addEvent(){
-let button = document.querySelectorAll('.grid-item');
-button.forEach((button)=>{
-    button.addEventListener("mousedown",()=>{
-    addRemoveClass(button,selection);
-    })
-    button.addEventListener("mouseover",(event)=>{
-        if(event.buttons == 1){
-            addRemoveClass(button,selection); 
-        }
-    })
+    document.querySelectorAll('.grid-item').forEach((button)=>{
+        button.addEventListener("mousedown",()=>{
+        addRemoveClass(button,selection);
+        })
+        button.addEventListener("mouseover",(event)=>{
+            if(event.buttons == 1){
+                addRemoveClass(button,selection); 
+            }
+        })
 })
 }
 
