@@ -1,15 +1,11 @@
 let mainContainer = document.querySelector('.main-container');
 let divContainer = document.createElement('div');
-
 divContainer.setAttribute("id","etch-container");
-//let h = window.prompt("how many divs",16);
-makeGrid(16)
 
-
-
+makeGrid(16);
 
 function makeGrid(value){
-    
+    divContainer.innerHTML ="";
     for(let i = 1 ;i <= value;i++ ){
         const row = document.createElement('div');
         row.setAttribute("id", `data-row-${i}`)
@@ -26,6 +22,7 @@ function makeGrid(value){
         }
     }
     mainContainer.appendChild(divContainer);
+    addEvent()
 }
 let selection="";
 let colorButton = document.querySelector('#black');
@@ -56,14 +53,12 @@ let resetButton = document.querySelector('#reset');
     })
 let slider = document.querySelector("#slider");
 let sliderValue = document.querySelector("#slider-value")
-
-slider.addEventListener("input",function(){
-    sliderValue.textContent = `${slider.value} x ${slider.value}`;
-    divContainer.innerHTML ="";
-    makeGrid(parseInt(slider.value));
+    slider.addEventListener("input",function(){
+        sliderValue.textContent = `${slider.value} x ${slider.value}`;
+        makeGrid(parseInt(slider.value));
     
 })
-
+function addEvent(){
 let button = document.querySelectorAll('.grid-item');
 button.forEach((button)=>{
     button.addEventListener("mousedown",()=>{
@@ -75,6 +70,7 @@ button.forEach((button)=>{
         }
     })
 })
+}
 
 function addRemoveClass(buttonId,selection){
     if(selection==="clear"){
